@@ -1,0 +1,162 @@
+.top {
+  background-color: $beige_2;
+
+  &__contacts {
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $large-tablet) {
+      padding-top: 0.4rem;
+      padding-bottom: 0.3rem;
+    }
+  }
+
+  &__tel {
+    display: flex;
+    gap: 2.5rem;
+    font-size: 0.875rem;
+    align-items: center;
+
+    @media screen and (max-width: $large-tablet) {
+      gap: 1.5rem;
+    }
+
+    &-number {
+      font-weight: 700;
+      color: $grey;
+      @include link-underline;
+    }
+
+    &-order-call {
+      text-transform: uppercase;
+      color: $grey;
+      @include link-underline;
+
+      @media screen and (max-width: $large-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__other-contacts {
+    display: flex;
+    gap: 5rem;
+    font-size: 0.875rem;
+    align-items: center;
+
+    @media screen and (max-width: $large-tablet) {
+      gap: 2.2rem;
+    }
+  }
+
+  &__locations {
+    @include link-underline;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.25rem;
+      color: $grey;
+    }
+
+    @media screen and (max-width: $large-mobile) {
+      display: none;
+    }
+  }
+
+  &__socmedia {
+    display: flex;
+    align-items: center;
+
+    &-item {
+      padding-left: 0.75rem;
+      @include animation-scale-max;
+    }
+
+    &-img {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+.header {
+  &__menu {
+    padding-top: 1.4rem;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    z-index: 6;
+
+    @media screen and (max-width: $mobile) {
+      padding-bottom: 2.3rem;
+    }
+
+    &-logo {
+      padding-right: 1rem;
+
+      @media screen and (max-width: $large-tablet) {
+        width: 8.5rem;
+      }
+
+      @media screen and (max-width: $mobile) {
+        width: 6.6rem;
+      }
+    }
+  }
+
+  &__nav {
+    padding-right: 5rem;
+    display: flex;
+    align-items: center;
+
+    &-container {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(5, max-content);
+      grid-template-rows: 1fr;
+      column-gap: 3.5rem;
+
+      @media screen and (max-width: $small-desktop) {
+        grid-template-columns: repeat(3, max-content);
+        grid-template-rows: repeat(2, 1fr);
+      }
+      @media screen and (max-width: $large-tablet) {
+        display: none;
+      }
+    }
+
+    &-link {
+      color: $grey;
+      text-transform: uppercase;
+      font-size: 1rem;
+      transition: $transition;
+      @include link-underline;
+    }
+  }
+
+  &__menu-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-left: 1rem;
+  }
+
+  &__burger {
+    display: none;
+    @media screen and (max-width: $large-tablet) {
+      display: flex;
+      margin-left: 1.5rem;
+    }
+
+    @media screen and (max-width: $large-mobile) {
+      margin-left: 0;
+    }
+  }
+}
